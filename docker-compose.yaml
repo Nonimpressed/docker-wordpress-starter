@@ -19,6 +19,7 @@ services:
       - ./my-theme:/var/www/html/wp-content/themes/my-theme
       - ./info.php:/var/www/html/info.php
       - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini 
+      - plugins:/var/www/html/wp-content/plugins
 
   my_db:
     image: mariadb
@@ -35,3 +36,4 @@ services:
 
 volumes:
   my_db_data: {}
+  plugins: {}
